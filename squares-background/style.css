@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pattern {
+    width: 75vw;
+    height: 75vh;
+    --square-color: rgb(51, 253, 0);
+    --square-size: 8%;
+    --square-spacing: 150px;
+    background-image: paint(squares);
+    transition: --square-size .4s ease-in-out, --square-spacing .4s ease-in-out, --square-color .4s ease-in-out;
+}
+
+.pattern:hover {
+    --square-size: 4%;
+    --square-spacing: 75px;
+    --square-color: unset;
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    display: inline-block;
+    padding: 0 .2em;
+    background-image: paint(underline);
+    transition: --square-spacing .5s, --square-color 1.5s;
+}
+
+.first-title {
+    --square-color: #00c5ab;
+    --square-spacing: 8px;
+}
+
+.first-title:hover {
+    --square-color: #007e6d;
+    --square-spacing: 1px;
+}
+
+.second-title {
+    --square-color: #9cd400;
+    --square-spacing: 16px;
+}
+
+.second-title:hover {
+    --square-color: #bbff00;
+    --square-spacing: 1px;
+}

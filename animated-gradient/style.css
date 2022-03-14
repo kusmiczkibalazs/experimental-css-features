@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    display: inline-block;
+    padding-left: .2em;
+    padding-right: 1em;
+    border-radius: 3px;
+    font-size: 3em;
+    background: linear-gradient(90deg, var(--gradient-color) var(--gradient-percentage), transparent 100%);
+    transition: --gradient-color ease-in-out .8s, --gradient-percentage .8s;
+}
+
+.first-title {
+    --gradient-color: #00edff;
+}
+
+.first-title:hover {
+    --gradient-color: #0004ff;
+}
+
+.second-title {
+    --gradient-color: #51ff00;
+}
+
+.second-title:hover {
+    --gradient-percentage: 100%;
+}
+
+p {
+    font-size: 1.2em;
+    padding: .4em;
+}
+
+.first-paragraph {
+    background: radial-gradient(circle, #d3db5c var(--gradient-percentage) 0%, #eca460 100%);
+    transition: --gradient-percentage 1s;
+}
+
+.first-paragraph:hover {
+    --gradient-percentage: 100%;
+}
+
+.second-paragraph {
+    background: linear-gradient(var(--gradient-angle), #d3db5c 0%, #60adec 100%);
+    transition: --gradient-angle 1s;
+}
+
+.second-paragraph:hover {
+    --gradient-angle: 180deg;
+}
+
+@property --gradient-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: transparent;
+}
+
+@property --gradient-percentage {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --gradient-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 45deg;
+}

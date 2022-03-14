@@ -1,0 +1,24 @@
+.pattern {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    --circle-color: rgb(51, 253, 0);
+    background-image: paint(circles);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%   {
+        --circle-size: 7%;
+    }
+
+    50% {
+        --circle-size: 4%;
+    }
+
+    100% {
+        --circle-size: 7%;
+    }
+}
