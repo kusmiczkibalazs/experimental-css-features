@@ -2,12 +2,11 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #213153;
-    color: #fff;
+    color: #213153;
 }
 
 .container {
-    border: 3px solid #fff;
+    border: 3px solid #213153;
     text-align: justify;
     font-size: 1.5em;
     width: 50%;
