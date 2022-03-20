@@ -36,7 +36,7 @@ p {
 }
 
 .first-paragraph {
-    background: radial-gradient(circle, #d3db5c var(--gradient-percentage) 0%, #eca460 100%);
+    background: radial-gradient(circle, #d3db5c var(--gradient-percentage), #eca460 100%);
     transition: --gradient-percentage 1s;
 }
 
