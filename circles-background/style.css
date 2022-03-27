@@ -16,6 +16,7 @@
 
     50% {
         --circle-size: 4%;
+        --circle-color: rgb(0, 199, 139);
     }
 
     100% {
