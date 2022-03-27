@@ -7,6 +7,8 @@ class Circles {
         let { width, height } = geometry;
         let { value: size, unit: sizeUnit } = properties.get("--circle-size");
 
+        console.log(properties.get("--circle-size"));
+
         if (size === 0) {
             return;
         }
