@@ -65,29 +65,3 @@ input[type='range'] {
     }
 }
 
-.unsupported-panel {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 275px;
-    font-size: 1em;
-    background-color: #000;
-    color: #f00;
-    padding: .5em;
-    z-index: 10;
-}
-
-.close-btn {
-    color: #fff;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-}
-
-@supports(background-image: paint(something)) {
-    .unsupported-panel {
-        display:none;
-    }
-}
