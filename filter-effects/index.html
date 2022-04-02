@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter effects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="unsupported-panel">
+        Backdrop filter might not work in this browser
+        <div class="close-btn">X</div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-5 controls">
+                <div class="input-container">
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" class="form-range" min="0" max="50" value="0" step="1" data-unit="px" data-default="0">
+                    <div class="value-display blur"></div>
+                </div>
+                <div class="input-container">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" class="form-range" min="0" max="200" value="100" step="1" data-unit="%" data-default="100">
+                    <div class="value-display brightness"></div>
+                </div>
+                <div class="input-container">
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" class="form-range" min="0" max="200" value="100" step="1" data-unit="%" data-default="100">
+                    <div class="value-display contrast"></div>
+                </div>
+                <div class="input-container">
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" class="form-range" min="0" max="100" value="0" step="1" data-unit="%" data-default="0">
+                    <div class="value-display grayscale"></div>
+                </div>
+                <div class="input-container">
+                    <label for="hue-rotate">Hue rotate</label>
+                    <input type="range" id="hue-rotate" class="form-range" min="0" max="360" value="0" step="1" data-unit="deg" data-default="0">
+                    <div class="value-display hue-rotate"></div>
+                </div>
+                <div class="input-container">
+                    <label for="invert">Invert</label>
+                    <input type="range" id="invert" class="form-range" min="0" max="100" value="0" step="1" data-unit="%" data-default="0">
+                    <div class="value-display invert"></div>
+                </div>
+                <div class="input-container">
+                    <label for="opacity">Opacity</label>
+                    <input type="range" id="opacity" class="form-range" min="0" max="100" value="100" step="1" data-unit="%" data-default="100">
+                    <div class="value-display opacity"></div>
+                </div>
+                <div class="input-container">
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" class="form-range" min="0" max="200" value="100" step="1" data-unit="%" data-default="100">
+                    <div class="value-display saturate"></div>
+                </div>
+                <div class="input-container">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" class="form-range" min="0" max="100" value="0" step="1" data-unit="%" data-default="0">
+                    <div class="value-display sepia"></div>
+                </div>
+
+                <div class="drop-shadow-section">
+                    <hr>
+                    <h3>Drop shadow</h3>
+                    <div class="input-container">
+                        <label for="drop-shadow-x">Offset X</label>
+                        <input type="range" id="drop-shadow-x" class="drop-shadow form-range" min="-50" max="50" value="0" step="1" data-unit="px" data-default="0">
+                        <div class="value-display drop-shadow-x"></div>
+                    </div>
+                    <div class="input-container">
+                        <label for="drop-shadow-y">Offset Y</label>
+                        <input type="range" id="drop-shadow-y" class="drop-shadow form-range" min="-50" max="50" value="0" step="1" data-unit="px" data-default="0">
+                        <div class="value-display drop-shadow-y"></div>
+                    </div>
+                    <div class="input-container">
+                        <label for="drop-shadow-blur">Blur radius</label>
+                        <input type="range" id="drop-shadow-blur" class="drop-shadow form-range" min="0" max="100" value="0" step="1" data-unit="px" data-default="0">
+                        <div class="value-display drop-shadow-blur"></div>
+                    </div>
+                    <div class="input-container">
+                        <label for="drop-shadow-color">Color</label>
+                        <input type="color" id="drop-shadow-color" class="drop-shadow form-control-color" value="#ffffff" data-default="#ffffff">
+                        <div class="value-display drop-shadow-color ms-sm-3"></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around my-3">
+                    <div class="input-container">
+                        <input class="form-check-input" type="radio" name="filter-type" value="filter" id="filter" checked>
+                        <label class="form-check-label" for="filter">Filter</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input class="form-check-input" type="radio" name="filter-type" value="backdrop-filter" id="backdrop-filter">
+                        <label class="form-check-label" for="backdrop-filter">Backdrop filter</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-danger text-uppercase" id="reset-values">Reset</button>
+                </div>
+            </div>
+
+            <div class="col-lg-7 d-flex justify-content-center">
+                <img src="colorful-img.jpg" alt="colorful image">
+                <div class="text-block">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum doloribus dolore consectetur praesentium distinctio voluptatum soluta fuga ad adipisci! Dolore omnis tenetur deserunt nesciunt beatae accusantium officia, nihil sit veritatis quidem numquam at eius praesentium earum, quaerat itaque et nisi amet ea saepe!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
