@@ -59,5 +59,3 @@ document.querySelector("#reset-values").addEventListener("click", resetValues);
 refreshValueDisplay();
 filterContent();
 filterTypeChange();
-
-document.querySelector(".close-btn").addEventListener("click", () => document.querySelector(".unsupported-panel").style.display = "none");
